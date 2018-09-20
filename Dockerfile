@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 RUN apt-get update && \
+    apt-get install -y --no-install-recommends curl wget && \
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
     apt-get install -y --no-install-recommends python3 python3-pip git-lfs git && \
     git clone https://github.com/mozilla/DeepSpeech && \
